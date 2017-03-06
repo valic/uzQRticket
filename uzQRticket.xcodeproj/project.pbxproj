@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB4A80B41E6DDB88000664F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A80B31E6DDB88000664F4 /* AppDelegate.swift */; };
+		FB4A80B61E6DDB88000664F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A80B51E6DDB88000664F4 /* ViewController.swift */; };
+		FB4A80B91E6DDB88000664F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4A80B71E6DDB88000664F4 /* Main.storyboard */; };
+		FB4A80BC1E6DDB88000664F4 /* uzQRticket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB4A80BA1E6DDB88000664F4 /* uzQRticket.xcdatamodeld */; };
+		FB4A80BE1E6DDB88000664F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4A80BD1E6DDB88000664F4 /* Assets.xcassets */; };
+		FB4A80C11E6DDB88000664F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4A80BF1E6DDB88000664F4 /* LaunchScreen.storyboard */; };
+		FB4A80CC1E6DDB89000664F4 /* uzQRticketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A80CB1E6DDB89000664F4 /* uzQRticketTests.swift */; };
+		FB4A80D71E6DDB89000664F4 /* uzQRticketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A80D61E6DDB89000664F4 /* uzQRticketUITests.swift */; };
+		FB4A80E51E6DE632000664F4 /* QRscanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A80E41E6DE632000664F4 /* QRscanViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB4A80C81E6DDB89000664F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB4A80A81E6DDB88000664F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB4A80AF1E6DDB88000664F4;
+			remoteInfo = uzQRticket;
+		};
+		FB4A80D31E6DDB89000664F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB4A80A81E6DDB88000664F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB4A80AF1E6DDB88000664F4;
+			remoteInfo = uzQRticket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB4A80B01E6DDB88000664F4 /* uzQRticket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uzQRticket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4A80B31E6DDB88000664F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB4A80B51E6DDB88000664F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB4A80B81E6DDB88000664F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB4A80BB1E6DDB88000664F4 /* uzQRticket.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = uzQRticket.xcdatamodel; sourceTree = "<group>"; };
+		FB4A80BD1E6DDB88000664F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB4A80C01E6DDB88000664F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB4A80C21E6DDB88000664F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB4A80C71E6DDB89000664F4 /* uzQRticketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uzQRticketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4A80CB1E6DDB89000664F4 /* uzQRticketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uzQRticketTests.swift; sourceTree = "<group>"; };
+		FB4A80CD1E6DDB89000664F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB4A80D21E6DDB89000664F4 /* uzQRticketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uzQRticketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4A80D61E6DDB89000664F4 /* uzQRticketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uzQRticketUITests.swift; sourceTree = "<group>"; };
+		FB4A80D81E6DDB89000664F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB4A80E41E6DE632000664F4 /* QRscanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRscanViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB4A80AD1E6DDB88000664F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB4A80C41E6DDB89000664F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB4A80CF1E6DDB89000664F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB4A80A71E6DDB88000664F4 = {
+			isa = PBXGroup;
+			children = (
+				FB4A80B21E6DDB88000664F4 /* uzQRticket */,
+				FB4A80CA1E6DDB89000664F4 /* uzQRticketTests */,
+				FB4A80D51E6DDB89000664F4 /* uzQRticketUITests */,
+				FB4A80B11E6DDB88000664F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB4A80B11E6DDB88000664F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB4A80B01E6DDB88000664F4 /* uzQRticket.app */,
+				FB4A80C71E6DDB89000664F4 /* uzQRticketTests.xctest */,
+				FB4A80D21E6DDB89000664F4 /* uzQRticketUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB4A80B21E6DDB88000664F4 /* uzQRticket */ = {
+			isa = PBXGroup;
+			children = (
+				FB4A80B31E6DDB88000664F4 /* AppDelegate.swift */,
+				FB4A80B51E6DDB88000664F4 /* ViewController.swift */,
+				FB4A80B71E6DDB88000664F4 /* Main.storyboard */,
+				FB4A80E41E6DE632000664F4 /* QRscanViewController.swift */,
+				FB4A80BD1E6DDB88000664F4 /* Assets.xcassets */,
+				FB4A80BF1E6DDB88000664F4 /* LaunchScreen.storyboard */,
+				FB4A80C21E6DDB88000664F4 /* Info.plist */,
+				FB4A80BA1E6DDB88000664F4 /* uzQRticket.xcdatamodeld */,
+			);
+			path = uzQRticket;
+			sourceTree = "<group>";
+		};
+		FB4A80CA1E6DDB89000664F4 /* uzQRticketTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB4A80CB1E6DDB89000664F4 /* uzQRticketTests.swift */,
+				FB4A80CD1E6DDB89000664F4 /* Info.plist */,
+			);
+			path = uzQRticketTests;
+			sourceTree = "<group>";
+		};
+		FB4A80D51E6DDB89000664F4 /* uzQRticketUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB4A80D61E6DDB89000664F4 /* uzQRticketUITests.swift */,
+				FB4A80D81E6DDB89000664F4 /* Info.plist */,
+			);
+			path = uzQRticketUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB4A80AF1E6DDB88000664F4 /* uzQRticket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB4A80DB1E6DDB89000664F4 /* Build configuration list for PBXNativeTarget "uzQRticket" */;
+			buildPhases = (
+				FB4A80AC1E6DDB88000664F4 /* Sources */,
+				FB4A80AD1E6DDB88000664F4 /* Frameworks */,
+				FB4A80AE1E6DDB88000664F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = uzQRticket;
+			productName = uzQRticket;
+			productReference = FB4A80B01E6DDB88000664F4 /* uzQRticket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB4A80C61E6DDB89000664F4 /* uzQRticketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB4A80DE1E6DDB89000664F4 /* Build configuration list for PBXNativeTarget "uzQRticketTests" */;
+			buildPhases = (
+				FB4A80C31E6DDB89000664F4 /* Sources */,
+				FB4A80C41E6DDB89000664F4 /* Frameworks */,
+				FB4A80C51E6DDB89000664F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB4A80C91E6DDB89000664F4 /* PBXTargetDependency */,
+			);
+			name = uzQRticketTests;
+			productName = uzQRticketTests;
+			productReference = FB4A80C71E6DDB89000664F4 /* uzQRticketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB4A80D11E6DDB89000664F4 /* uzQRticketUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB4A80E11E6DDB89000664F4 /* Build configuration list for PBXNativeTarget "uzQRticketUITests" */;
+			buildPhases = (
+				FB4A80CE1E6DDB89000664F4 /* Sources */,
+				FB4A80CF1E6DDB89000664F4 /* Frameworks */,
+				FB4A80D01E6DDB89000664F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB4A80D41E6DDB89000664F4 /* PBXTargetDependency */,
+			);
+			name = uzQRticketUITests;
+			productName = uzQRticketUITests;
+			productReference = FB4A80D21E6DDB89000664F4 /* uzQRticketUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB4A80A81E6DDB88000664F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Mialin Valentin";
+				TargetAttributes = {
+					FB4A80AF1E6DDB88000664F4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = M6RU8K5R5C;
+						ProvisioningStyle = Automatic;
+					};
+					FB4A80C61E6DDB89000664F4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = M6RU8K5R5C;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FB4A80AF1E6DDB88000664F4;
+					};
+					FB4A80D11E6DDB89000664F4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = M6RU8K5R5C;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FB4A80AF1E6DDB88000664F4;
+					};
+				};
+			};
+			buildConfigurationList = FB4A80AB1E6DDB88000664F4 /* Build configuration list for PBXProject "uzQRticket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB4A80A71E6DDB88000664F4;
+			productRefGroup = FB4A80B11E6DDB88000664F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB4A80AF1E6DDB88000664F4 /* uzQRticket */,
+				FB4A80C61E6DDB89000664F4 /* uzQRticketTests */,
+				FB4A80D11E6DDB89000664F4 /* uzQRticketUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB4A80AE1E6DDB88000664F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB4A80C11E6DDB88000664F4 /* LaunchScreen.storyboard in Resources */,
+				FB4A80BE1E6DDB88000664F4 /* Assets.xcassets in Resources */,
+				FB4A80B91E6DDB88000664F4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB4A80C51E6DDB89000664F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB4A80D01E6DDB89000664F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB4A80AC1E6DDB88000664F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB4A80E51E6DE632000664F4 /* QRscanViewController.swift in Sources */,
+				FB4A80BC1E6DDB88000664F4 /* uzQRticket.xcdatamodeld in Sources */,
+				FB4A80B61E6DDB88000664F4 /* ViewController.swift in Sources */,
+				FB4A80B41E6DDB88000664F4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB4A80C31E6DDB89000664F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB4A80CC1E6DDB89000664F4 /* uzQRticketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB4A80CE1E6DDB89000664F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB4A80D71E6DDB89000664F4 /* uzQRticketUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB4A80C91E6DDB89000664F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB4A80AF1E6DDB88000664F4 /* uzQRticket */;
+			targetProxy = FB4A80C81E6DDB89000664F4 /* PBXContainerItemProxy */;
+		};
+		FB4A80D41E6DDB89000664F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB4A80AF1E6DDB88000664F4 /* uzQRticket */;
+			targetProxy = FB4A80D31E6DDB89000664F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB4A80B71E6DDB88000664F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB4A80B81E6DDB88000664F4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB4A80BF1E6DDB88000664F4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB4A80C01E6DDB88000664F4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB4A80D91E6DDB89000664F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB4A80DA1E6DDB89000664F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB4A80DC1E6DDB89000664F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M6RU8K5R5C;
+				INFOPLIST_FILE = uzQRticket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mialin.uzQRticket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FB4A80DD1E6DDB89000664F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M6RU8K5R5C;
+				INFOPLIST_FILE = uzQRticket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mialin.uzQRticket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		FB4A80DF1E6DDB89000664F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = M6RU8K5R5C;
+				INFOPLIST_FILE = uzQRticketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mialin.uzQRticketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/uzQRticket.app/uzQRticket";
+			};
+			name = Debug;
+		};
+		FB4A80E01E6DDB89000664F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = M6RU8K5R5C;
+				INFOPLIST_FILE = uzQRticketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mialin.uzQRticketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/uzQRticket.app/uzQRticket";
+			};
+			name = Release;
+		};
+		FB4A80E21E6DDB89000664F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = M6RU8K5R5C;
+				INFOPLIST_FILE = uzQRticketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mialin.uzQRticketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = uzQRticket;
+			};
+			name = Debug;
+		};
+		FB4A80E31E6DDB89000664F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = M6RU8K5R5C;
+				INFOPLIST_FILE = uzQRticketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mialin.uzQRticketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = uzQRticket;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB4A80AB1E6DDB88000664F4 /* Build configuration list for PBXProject "uzQRticket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB4A80D91E6DDB89000664F4 /* Debug */,
+				FB4A80DA1E6DDB89000664F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB4A80DB1E6DDB89000664F4 /* Build configuration list for PBXNativeTarget "uzQRticket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB4A80DC1E6DDB89000664F4 /* Debug */,
+				FB4A80DD1E6DDB89000664F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FB4A80DE1E6DDB89000664F4 /* Build configuration list for PBXNativeTarget "uzQRticketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB4A80DF1E6DDB89000664F4 /* Debug */,
+				FB4A80E01E6DDB89000664F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FB4A80E11E6DDB89000664F4 /* Build configuration list for PBXNativeTarget "uzQRticketUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB4A80E21E6DDB89000664F4 /* Debug */,
+				FB4A80E31E6DDB89000664F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FB4A80BA1E6DDB88000664F4 /* uzQRticket.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FB4A80BB1E6DDB88000664F4 /* uzQRticket.xcdatamodel */,
+			);
+			currentVersion = FB4A80BB1E6DDB88000664F4 /* uzQRticket.xcdatamodel */;
+			path = uzQRticket.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FB4A80A81E6DDB88000664F4 /* Project object */;
+}

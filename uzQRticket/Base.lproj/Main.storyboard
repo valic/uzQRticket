@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ASS-Wc-MQQ">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ticket-->
+        <scene sceneID="158-Od-HwA">
+            <objects>
+                <tableViewController id="Vu6-dg-ohN" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZhD-bb-YCd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Woz-QR-jPc">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Woz-QR-jPc" id="46h-rJ-TPL">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vu6-dg-ohN" id="aRM-Eo-1cE"/>
+                            <outlet property="delegate" destination="Vu6-dg-ohN" id="JiG-BY-hD0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Ticket" id="2Zq-fh-NlJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wcq-6C-rKu">
+                            <connections>
+                                <segue destination="uTZ-Ft-WnN" kind="show" id="IuG-Jt-3rJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rju-mZ-flK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-77" y="58"/>
+        </scene>
+        <!--Scan QR code-->
+        <scene sceneID="VYc-Th-NRx">
+            <objects>
+                <viewController id="uTZ-Ft-WnN" customClass="QRscanViewController" customModule="uzQRticket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JfL-wd-j05"/>
+                        <viewControllerLayoutGuide type="bottom" id="eOh-Bf-RnB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="efI-AO-YA2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scan QR code" id="Ojs-v5-Elc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TWn-ve-oth" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="58"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oow-ZK-fCp">
+            <objects>
+                <navigationController id="ASS-Wc-MQQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3s2-Cm-zfq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Vu6-dg-ohN" kind="relationship" relationship="rootViewController" id="d6Z-W4-S0g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5T-Aa-o0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-893" y="59"/>
+        </scene>
+    </scenes>
+</document>
