@@ -131,20 +131,21 @@ class QRscanViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             print("No barcode/QR code is detected")
             return
         }
-        
+
         // Get the metadata object.
         let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
         // Here we use filter method to check if the type of metadataObj is supported
         // Instead of hardcoding the AVMetadataObjectTypeQRCode, we check if the type
         // can be found in the array of supported bar codes.
+        
         if supportedBarCodes.contains(metadataObj.type) {
             
             if metadataObj.stringValue != nil {
                 textQR = metadataObj.stringValue!
                 
                 if let textQR = textQR {
-                    //   print(textQR)
+                       print(textQR)
                     
                     let arrayScanCode = textQR.components(separatedBy: "\n")
                     
@@ -170,10 +171,7 @@ class QRscanViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                                 
                                 
                             } else {
-                                print("билета нету в Core Data, добавляем")
-                                
-                                deleteCaptureSession ()
-                                videoPreviewLayer!.removeFromSuperlayer()
+                                // билета нету в Core Data, добавляем
                                 
                                 entity.setValue(textQR, forKey: "stringTicket") // сохраняем всю строку, для создания QR кода
                                 entity.setValue(arrayScanCode[1], forKey: "train") // поїзд
@@ -187,8 +185,6 @@ class QRscanViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                                 entity.setValue(NSString(string: arrayScanCode[12]).floatValue, forKey: "cost") // вартість
                                 entity.setValue(arrayScanCode[15], forKey: "ticketID")
                                 
-                                
-                                
                                 // we save our entity
                                 do {
                                     try context.save()
@@ -196,8 +192,11 @@ class QRscanViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                                     fatalError("Failure to save context: \(error)")
                                 }
                                 
-                                // перейти на первый tab
-                                tabBarController?.selectedIndex = 0
+                                deleteCaptureSession ()
+                                videoPreviewLayer!.removeFromSuperlayer()
+                                
+                                // вернутся на Ticket View Controller
+                                returnToTicketViewController()
                                 
                             }
                         } catch let error as NSError {
@@ -215,33 +214,34 @@ class QRscanViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                         }
                         else {
                             self.alertCaptureSession("в QR code нету билета")
+                         //   captureSession!.stopRunning()
                         }
                         
                     }
                 }
-                //  captureSession!.stopRunning()
-                //  videoPreviewLayer!.removeFromSuperlayer()
+              //  captureSession!.stopRunning()
+              //  videoPreviewLayer!.removeFromSuperlayer()
                 
-                // вернутся назад
-                let transition = CATransition()
-                transition.duration = 0.25
-                transition.type = kCATransitionPush
-                transition.subtype = kCATransitionFromLeft
-                view.window!.layer.add(transition, forKey: kCATransition)
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let controller = storyboard.instantiateViewController(withIdentifier: "Ticket")
-                self.present(controller, animated: false, completion: nil)
-
+                // вернутся на Ticket View Controller
+               // returnToTicketViewController()
+                
+                
                 
             }
         }
-            
-        else{
-            print("del")
-            deleteCaptureSession ()
-            videoPreviewLayer!.removeFromSuperlayer()
-        }
     }
+    
+    func returnToTicketViewController() {
+        let transition = CATransition()
+        transition.duration = 0.25
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromLeft
+        view.window!.layer.add(transition, forKey: kCATransition)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Ticket")
+        self.present(controller, animated: false, completion: nil)
+    }
+    
     
     func stringToDate (_ stringData: String) -> Date  {
         

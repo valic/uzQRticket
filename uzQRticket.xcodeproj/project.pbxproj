@@ -16,6 +16,11 @@
 		FB4A80CC1E6DDB89000664F4 /* uzQRticketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A80CB1E6DDB89000664F4 /* uzQRticketTests.swift */; };
 		FB4A80D71E6DDB89000664F4 /* uzQRticketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A80D61E6DDB89000664F4 /* uzQRticketUITests.swift */; };
 		FB4A80E51E6DE632000664F4 /* QRscanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A80E41E6DE632000664F4 /* QRscanViewController.swift */; };
+		FB5B79931E72229E006ECF39 /* Tickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B79921E72229E006ECF39 /* Tickets.swift */; };
+		FB5B79951E7222DF006ECF39 /* Tickets+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B79941E7222DF006ECF39 /* Tickets+CoreDataProperties.swift */; };
+		FB83FBD01E71F7DB0067AB4E /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83FBCF1E71F7DB0067AB4E /* CellViewController.swift */; };
+		FB83FBD21E71FAA00067AB4E /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83FBD11E71FAA00067AB4E /* TicketTableViewCell.swift */; };
+		FB83FBD61E71FBC60067AB4E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83FBD51E71FBC60067AB4E /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,12 @@
 		FB4A80D61E6DDB89000664F4 /* uzQRticketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uzQRticketUITests.swift; sourceTree = "<group>"; };
 		FB4A80D81E6DDB89000664F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB4A80E41E6DE632000664F4 /* QRscanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRscanViewController.swift; sourceTree = "<group>"; };
+		FB5B79921E72229E006ECF39 /* Tickets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tickets.swift; sourceTree = "<group>"; };
+		FB5B79941E7222DF006ECF39 /* Tickets+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tickets+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FB83FBCB1E71F1190067AB4E /* uzQRticket-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uzQRticket-Bridging-Header.h"; sourceTree = "<group>"; };
+		FB83FBCF1E71F7DB0067AB4E /* CellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
+		FB83FBD11E71FAA00067AB4E /* TicketTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TicketTableViewCell.swift; path = ../TicketTableViewCell.swift; sourceTree = "<group>"; };
+		FB83FBD51E71FBC60067AB4E /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = ../DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +92,8 @@
 		FB4A80A71E6DDB88000664F4 = {
 			isa = PBXGroup;
 			children = (
+				FB5B79921E72229E006ECF39 /* Tickets.swift */,
+				FB5B79941E7222DF006ECF39 /* Tickets+CoreDataProperties.swift */,
 				FB4A80B21E6DDB88000664F4 /* uzQRticket */,
 				FB4A80CA1E6DDB89000664F4 /* uzQRticketTests */,
 				FB4A80D51E6DDB89000664F4 /* uzQRticketUITests */,
@@ -105,10 +118,14 @@
 				FB4A80B51E6DDB88000664F4 /* ViewController.swift */,
 				FB4A80B71E6DDB88000664F4 /* Main.storyboard */,
 				FB4A80E41E6DE632000664F4 /* QRscanViewController.swift */,
+				FB83FBCF1E71F7DB0067AB4E /* CellViewController.swift */,
+				FB83FBD11E71FAA00067AB4E /* TicketTableViewCell.swift */,
+				FB83FBD51E71FBC60067AB4E /* DataController.swift */,
 				FB4A80BD1E6DDB88000664F4 /* Assets.xcassets */,
 				FB4A80BF1E6DDB88000664F4 /* LaunchScreen.storyboard */,
 				FB4A80C21E6DDB88000664F4 /* Info.plist */,
 				FB4A80BA1E6DDB88000664F4 /* uzQRticket.xcdatamodeld */,
+				FB83FBCB1E71F1190067AB4E /* uzQRticket-Bridging-Header.h */,
 			);
 			path = uzQRticket;
 			sourceTree = "<group>";
@@ -200,6 +217,7 @@
 					FB4A80AF1E6DDB88000664F4 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = M6RU8K5R5C;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					FB4A80C61E6DDB89000664F4 = {
@@ -268,10 +286,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB83FBD61E71FBC60067AB4E /* DataController.swift in Sources */,
+				FB83FBD01E71F7DB0067AB4E /* CellViewController.swift in Sources */,
 				FB4A80E51E6DE632000664F4 /* QRscanViewController.swift in Sources */,
 				FB4A80BC1E6DDB88000664F4 /* uzQRticket.xcdatamodeld in Sources */,
+				FB5B79951E7222DF006ECF39 /* Tickets+CoreDataProperties.swift in Sources */,
+				FB83FBD21E71FAA00067AB4E /* TicketTableViewCell.swift in Sources */,
 				FB4A80B61E6DDB88000664F4 /* ViewController.swift in Sources */,
 				FB4A80B41E6DDB88000664F4 /* AppDelegate.swift in Sources */,
+				FB5B79931E72229E006ECF39 /* Tickets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,11 +446,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = M6RU8K5R5C;
 				INFOPLIST_FILE = uzQRticket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mialin.uzQRticket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "uzQRticket/uzQRticket-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -436,11 +462,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = M6RU8K5R5C;
 				INFOPLIST_FILE = uzQRticket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mialin.uzQRticket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "uzQRticket/uzQRticket-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -522,6 +550,7 @@
 				FB4A80DD1E6DDB89000664F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB4A80DE1E6DDB89000664F4 /* Build configuration list for PBXNativeTarget "uzQRticketTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +559,7 @@
 				FB4A80E01E6DDB89000664F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB4A80E11E6DDB89000664F4 /* Build configuration list for PBXNativeTarget "uzQRticketUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +568,7 @@
 				FB4A80E31E6DDB89000664F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -6,30 +6,157 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Ticket-->
         <scene sceneID="158-Od-HwA">
             <objects>
-                <tableViewController id="Vu6-dg-ohN" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZhD-bb-YCd">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="Vu6-dg-ohN" customClass="CellViewController" customModule="uzQRticket" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZhD-bb-YCd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Woz-QR-jPc">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextCell" id="Woz-QR-jPc" customClass="TicketTableViewCell" customModule="uzQRticket" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Woz-QR-jPc" id="46h-rJ-TPL">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82K-cb-00j">
+                                            <rect key="frame" x="8" y="8" width="40" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="cnl-gR-ZuC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zd-WR-DiX">
+                                            <rect key="frame" x="48" y="8" width="40" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="osE-gX-ekx"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пункт отправления" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xL-ae-mKK">
+                                            <rect key="frame" x="88" y="8" width="224" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQY-HN-49J">
+                                            <rect key="frame" x="8" y="26" width="40" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="GZy-Qq-AzQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lem-NQ-L1w">
+                                            <rect key="frame" x="48" y="26" width="40" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пункт прибытия" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDW-Pz-HcM">
+                                            <rect key="frame" x="88" y="26" width="224" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" image="Train" translatesAutoresizingMaskIntoConstraints="NO" id="Vl7-1Z-29S">
+                                            <rect key="frame" x="8" y="47" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="16" id="HmA-jn-UPn"/>
+                                                <constraint firstAttribute="height" constant="16" id="JcS-Pg-Xo6"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поезд" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5l-b0-RDY">
+                                            <rect key="frame" x="32" y="47" width="40" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Railroad Car" translatesAutoresizingMaskIntoConstraints="NO" id="0wQ-Bo-W4w">
+                                            <rect key="frame" x="8" y="68" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="ivJ-39-WU7"/>
+                                                <constraint firstAttribute="width" constant="16" id="wxJ-jJ-M90"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вагон" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGr-CR-AOQ">
+                                            <rect key="frame" x="34" y="68" width="38" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flight Seat" translatesAutoresizingMaskIntoConstraints="NO" id="Pmz-Ii-Qb4">
+                                            <rect key="frame" x="8" y="89" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="LEH-9P-aJp"/>
+                                                <constraint firstAttribute="width" constant="16" id="hcN-58-SS9"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="место" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0Q-XD-05b">
+                                            <rect key="frame" x="34" y="89" width="39" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7zd-WR-DiX" firstAttribute="centerY" secondItem="82K-cb-00j" secondAttribute="centerY" id="0Xg-5B-V7Y"/>
+                                        <constraint firstItem="VGr-CR-AOQ" firstAttribute="centerY" secondItem="0wQ-Bo-W4w" secondAttribute="centerY" id="1qw-4Q-ixH"/>
+                                        <constraint firstItem="IQY-HN-49J" firstAttribute="top" secondItem="82K-cb-00j" secondAttribute="bottom" constant="2" id="2Uj-GV-aRt"/>
+                                        <constraint firstItem="Lem-NQ-L1w" firstAttribute="leading" secondItem="7zd-WR-DiX" secondAttribute="leading" id="4O5-we-KGt"/>
+                                        <constraint firstItem="f5l-b0-RDY" firstAttribute="leading" secondItem="Vl7-1Z-29S" secondAttribute="trailing" constant="8" id="4oK-fO-80f"/>
+                                        <constraint firstItem="7zd-WR-DiX" firstAttribute="leading" secondItem="82K-cb-00j" secondAttribute="trailing" id="77F-GU-6MS"/>
+                                        <constraint firstItem="82K-cb-00j" firstAttribute="leading" secondItem="46h-rJ-TPL" secondAttribute="leadingMargin" id="9UE-Qy-mnc"/>
+                                        <constraint firstItem="IQY-HN-49J" firstAttribute="leading" secondItem="46h-rJ-TPL" secondAttribute="leadingMargin" id="Dxy-p3-KdV"/>
+                                        <constraint firstItem="Vl7-1Z-29S" firstAttribute="top" secondItem="IQY-HN-49J" secondAttribute="bottom" constant="5" id="Htm-75-Zie"/>
+                                        <constraint firstItem="Lem-NQ-L1w" firstAttribute="baseline" secondItem="IQY-HN-49J" secondAttribute="baseline" id="IPM-gZ-aQJ"/>
+                                        <constraint firstItem="6xL-ae-mKK" firstAttribute="centerY" secondItem="82K-cb-00j" secondAttribute="centerY" id="KDu-Iy-a8s"/>
+                                        <constraint firstItem="6xL-ae-mKK" firstAttribute="leading" secondItem="7zd-WR-DiX" secondAttribute="trailing" id="OLh-pN-HPf"/>
+                                        <constraint firstItem="u0Q-XD-05b" firstAttribute="leading" secondItem="Pmz-Ii-Qb4" secondAttribute="trailing" constant="10" id="PeE-Pt-tQ6"/>
+                                        <constraint firstItem="Vl7-1Z-29S" firstAttribute="leading" secondItem="IQY-HN-49J" secondAttribute="leading" id="RCI-Az-uD0"/>
+                                        <constraint firstItem="qDW-Pz-HcM" firstAttribute="leading" secondItem="Lem-NQ-L1w" secondAttribute="trailing" id="WMg-4p-OZT"/>
+                                        <constraint firstItem="IQY-HN-49J" firstAttribute="top" secondItem="82K-cb-00j" secondAttribute="bottom" constant="2" id="X7S-QP-keH"/>
+                                        <constraint firstItem="0wQ-Bo-W4w" firstAttribute="leading" secondItem="Pmz-Ii-Qb4" secondAttribute="leading" id="YHO-dp-IAq"/>
+                                        <constraint firstItem="u0Q-XD-05b" firstAttribute="centerY" secondItem="Pmz-Ii-Qb4" secondAttribute="centerY" id="Ya4-iN-XZp"/>
+                                        <constraint firstItem="qDW-Pz-HcM" firstAttribute="trailing" secondItem="6xL-ae-mKK" secondAttribute="trailing" id="eeB-xv-TPo"/>
+                                        <constraint firstItem="6xL-ae-mKK" firstAttribute="trailing" secondItem="46h-rJ-TPL" secondAttribute="trailingMargin" id="gaS-fI-0cR"/>
+                                        <constraint firstItem="Vl7-1Z-29S" firstAttribute="leading" secondItem="0wQ-Bo-W4w" secondAttribute="leading" id="mj9-Th-9cq"/>
+                                        <constraint firstItem="VGr-CR-AOQ" firstAttribute="leading" secondItem="0wQ-Bo-W4w" secondAttribute="trailing" constant="10" id="od9-Hu-qTb"/>
+                                        <constraint firstItem="Pmz-Ii-Qb4" firstAttribute="top" secondItem="0wQ-Bo-W4w" secondAttribute="bottom" constant="5" id="p9m-FR-4GY"/>
+                                        <constraint firstItem="82K-cb-00j" firstAttribute="top" secondItem="46h-rJ-TPL" secondAttribute="topMargin" id="pR2-pj-jq9"/>
+                                        <constraint firstItem="Lem-NQ-L1w" firstAttribute="trailing" secondItem="7zd-WR-DiX" secondAttribute="trailing" id="phB-gd-49E"/>
+                                        <constraint firstItem="0wQ-Bo-W4w" firstAttribute="top" secondItem="Vl7-1Z-29S" secondAttribute="bottom" constant="5" id="rMe-WS-6As"/>
+                                        <constraint firstItem="qDW-Pz-HcM" firstAttribute="baseline" secondItem="Lem-NQ-L1w" secondAttribute="baseline" id="v8P-VD-UmY"/>
+                                        <constraint firstItem="f5l-b0-RDY" firstAttribute="centerY" secondItem="Vl7-1Z-29S" secondAttribute="centerY" id="vxY-SG-Tqr"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateDesLabel" destination="Lem-NQ-L1w" id="yAG-FA-Ac1"/>
+                                    <outlet property="departureLabel" destination="6xL-ae-mKK" id="cMo-Gs-UvJ"/>
+                                    <outlet property="destinationLabel" destination="qDW-Pz-HcM" id="Pb9-xd-kaw"/>
+                                    <outlet property="railroadCar" destination="VGr-CR-AOQ" id="0QD-oe-Guz"/>
+                                    <outlet property="seatLabel" destination="u0Q-XD-05b" id="U0L-00-l27"/>
+                                    <outlet property="timeDepLabel" destination="82K-cb-00j" id="m6U-J5-UeG"/>
+                                    <outlet property="timeDesLabel" destination="IQY-HN-49J" id="YdL-5g-KLC"/>
+                                    <outlet property="train" destination="f5l-b0-RDY" id="boZ-Se-uWf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="Vu6-dg-ohN" id="aRM-Eo-1cE"/>
-                            <outlet property="delegate" destination="Vu6-dg-ohN" id="JiG-BY-hD0"/>
+                            <outlet property="dataSource" destination="Vu6-dg-ohN" id="UbV-4y-GoQ"/>
+                            <outlet property="delegate" destination="Vu6-dg-ohN" id="VTC-yh-utA"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Ticket" id="2Zq-fh-NlJ">
@@ -42,7 +169,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rju-mZ-flK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-77" y="58"/>
+            <point key="canvasLocation" x="-78.75" y="57.04225352112676"/>
         </scene>
         <!--Scan QR code-->
         <scene sceneID="VYc-Th-NRx">
@@ -80,4 +207,9 @@
             <point key="canvasLocation" x="-893" y="59"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Flight Seat" width="16" height="16"/>
+        <image name="Railroad Car" width="16" height="16"/>
+        <image name="Train" width="16" height="16"/>
+    </resources>
 </document>
