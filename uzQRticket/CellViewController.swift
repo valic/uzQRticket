@@ -166,46 +166,29 @@ class CellViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       // fetch()
-        /*
-        let test = tickets[(indexPath as NSIndexPath).row]
         
-        stringTicket = test.value(forKey: "stringTicket") as! String
-        train = test.value(forKey: "train") as! String
-        departure = test.value(forKey: "departure") as! String
-        destination = test.value(forKey: "destination") as! String
-        coach = test.value(forKey: "coach") as! String
-        seat = test.value(forKey: "seat") as! String
-        surnameAndName = test.value(forKey: "surnameAndName") as! String
-        cost = test.value(forKey: "cost") as! Float
-        dateTimeDep = test.value(forKey: "dateTimeDep") as! Date
-        dateTimeDes = test.value(forKey: "dateTimeDes") as! Date
-        ticketID = test.value(forKey: "ticketID") as! String
+        let ticket = tickets[(indexPath as NSIndexPath).row]
+        
+        seat = ticket.value(forKey: "seat") as! String
+        surnameAndName = ticket.value(forKey: "surnameAndName") as! String
+        ticketID = ticket.value(forKey: "ticketID") as! String
         
         self.performSegue(withIdentifier: "segueID", sender: nil)
- */
     }
     
  
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /* if segue.identifier == "segueID" {
-         if let destinationVC = segue.destination as? TicketInfo {
-         
-         destinationVC.stringTicket = stringTicket
-         destinationVC.train = train
-         destinationVC.departure = departure
-         destinationVC.destination = destination
-         destinationVC.coach = coach
-         destinationVC.seat = seat
-         destinationVC.surnameAndName = surnameAndName
-         destinationVC.cost = cost
-         destinationVC.dateTimeDep = dateTimeDep
-         destinationVC.dateTimeDes = dateTimeDes
-         destinationVC.ticketID = ticketID
-         }
-         }
-         */
+        
+        if segue.identifier == "segueID" {
+            if let destinationVC = segue.destination as? TicketInfoViewController {
+                
+                destinationVC.ticketID = ticketID
+                destinationVC.seat = seat
+                destinationVC.surnameAndName = surnameAndName
+                
+            }
+        }        
     }
     
     func stringRemoveRange10 (_ string: String) -> String {

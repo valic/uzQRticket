@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1E3FAF1E75F7EA00C79DCA /* TicketInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E3FAE1E75F7EA00C79DCA /* TicketInfoViewController.swift */; };
 		FB4A80B41E6DDB88000664F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A80B31E6DDB88000664F4 /* AppDelegate.swift */; };
 		FB4A80B61E6DDB88000664F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A80B51E6DDB88000664F4 /* ViewController.swift */; };
 		FB4A80B91E6DDB88000664F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4A80B71E6DDB88000664F4 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB1E3FAE1E75F7EA00C79DCA /* TicketInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketInfoViewController.swift; sourceTree = "<group>"; };
 		FB4A80B01E6DDB88000664F4 /* uzQRticket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uzQRticket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4A80B31E6DDB88000664F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB4A80B51E6DDB88000664F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				FB4A80B71E6DDB88000664F4 /* Main.storyboard */,
 				FB4A80E41E6DE632000664F4 /* QRscanViewController.swift */,
 				FB83FBCF1E71F7DB0067AB4E /* CellViewController.swift */,
+				FB1E3FAE1E75F7EA00C79DCA /* TicketInfoViewController.swift */,
 				FB83FBD11E71FAA00067AB4E /* TicketTableViewCell.swift */,
 				FB83FBD51E71FBC60067AB4E /* DataController.swift */,
 				FB4A80BD1E6DDB88000664F4 /* Assets.xcassets */,
@@ -292,6 +295,7 @@
 				FB4A80BC1E6DDB88000664F4 /* uzQRticket.xcdatamodeld in Sources */,
 				FB5B79951E7222DF006ECF39 /* Tickets+CoreDataProperties.swift in Sources */,
 				FB83FBD21E71FAA00067AB4E /* TicketTableViewCell.swift in Sources */,
+				FB1E3FAF1E75F7EA00C79DCA /* TicketInfoViewController.swift in Sources */,
 				FB4A80B61E6DDB88000664F4 /* ViewController.swift in Sources */,
 				FB4A80B41E6DDB88000664F4 /* AppDelegate.swift in Sources */,
 				FB5B79931E72229E006ECF39 /* Tickets.swift in Sources */,

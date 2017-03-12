@@ -20,11 +20,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TextCell" id="Woz-QR-jPc" customClass="TicketTableViewCell" customModule="uzQRticket" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TextCell" id="Woz-QR-jPc" customClass="TicketTableViewCell" customModule="uzQRticket" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Woz-QR-jPc" id="46h-rJ-TPL">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="109"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82K-cb-00j">
@@ -46,7 +46,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пункт отправления" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xL-ae-mKK">
-                                            <rect key="frame" x="88" y="8" width="224" height="16"/>
+                                            <rect key="frame" x="88" y="8" width="191" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -67,7 +67,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пункт прибытия" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDW-Pz-HcM">
-                                            <rect key="frame" x="88" y="26" width="224" height="16"/>
+                                            <rect key="frame" x="88" y="26" width="191" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -153,7 +153,6 @@
                                     <outlet property="timeDepLabel" destination="82K-cb-00j" id="m6U-J5-UeG"/>
                                     <outlet property="timeDesLabel" destination="IQY-HN-49J" id="YdL-5g-KLC"/>
                                     <outlet property="train" destination="f5l-b0-RDY" id="boZ-Se-uWf"/>
-                                    <segue destination="84q-il-tGx" kind="show" id="gKt-YV-693"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -169,6 +168,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="84q-il-tGx" kind="show" identifier="segueID" id="BDE-ck-fbC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rju-mZ-flK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,7 +198,7 @@
         <!--Ticket info-->
         <scene sceneID="t1Z-eJ-4jB">
             <objects>
-                <viewController id="84q-il-tGx" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="84q-il-tGx" customClass="TicketInfoViewController" customModule="uzQRticket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5OQ-L1-Czq"/>
                         <viewControllerLayoutGuide type="bottom" id="wzV-TO-W37"/>
@@ -251,6 +253,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ticket info" id="cYt-q9-3en"/>
+                    <connections>
+                        <outlet property="seatLabel" destination="7jK-2r-Jcx" id="J6L-F2-VIv"/>
+                        <outlet property="surnameNameLabel" destination="I0Y-oU-aSG" id="oAb-a5-1yk"/>
+                        <outlet property="ticketIdLabel" destination="rRI-Da-C81" id="OEN-XT-4RC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rrh-L0-hVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
