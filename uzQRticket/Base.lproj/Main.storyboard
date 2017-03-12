@@ -208,13 +208,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QUJ-jj-J2i">
-                                <rect key="frame" x="36" y="300" width="248" height="248"/>
+                                <rect key="frame" x="20" y="268" width="280" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QUJ-jj-J2i" secondAttribute="height" multiplier="1:1" id="s38-Xw-KYw"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="seetLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jK-2r-Jcx">
-                                <rect key="frame" x="16" y="190" width="288" height="21"/>
+                                <rect key="frame" x="16" y="158" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -226,7 +226,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="surnameNameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0Y-oU-aSG">
-                                <rect key="frame" x="16" y="219" width="288" height="21"/>
+                                <rect key="frame" x="16" y="187" width="288" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="lid-yi-Pu0"/>
                                 </constraints>
@@ -240,12 +240,12 @@
                             <constraint firstItem="7jK-2r-Jcx" firstAttribute="leading" secondItem="0Em-Jo-1x9" secondAttribute="leadingMargin" id="3BS-bk-B82"/>
                             <constraint firstItem="I0Y-oU-aSG" firstAttribute="leading" secondItem="0Em-Jo-1x9" secondAttribute="leadingMargin" id="4eG-h6-crg"/>
                             <constraint firstItem="7jK-2r-Jcx" firstAttribute="trailing" secondItem="0Em-Jo-1x9" secondAttribute="trailingMargin" id="6wS-KB-AV7"/>
+                            <constraint firstItem="QUJ-jj-J2i" firstAttribute="leading" secondItem="0Em-Jo-1x9" secondAttribute="leading" constant="20" id="Acl-EO-y7c"/>
                             <constraint firstItem="rRI-Da-C81" firstAttribute="trailing" secondItem="0Em-Jo-1x9" secondAttribute="trailingMargin" id="BKV-KJ-2UY"/>
                             <constraint firstItem="rRI-Da-C81" firstAttribute="leading" secondItem="0Em-Jo-1x9" secondAttribute="leadingMargin" id="BLy-46-FfT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="I0Y-oU-aSG" secondAttribute="trailing" id="CAg-Fo-ynP"/>
                             <constraint firstItem="QUJ-jj-J2i" firstAttribute="centerX" secondItem="0Em-Jo-1x9" secondAttribute="centerX" id="DTl-FN-h5G"/>
                             <constraint firstItem="rRI-Da-C81" firstAttribute="top" secondItem="5OQ-L1-Czq" secondAttribute="bottom" constant="8" id="JMv-3y-Njj"/>
-                            <constraint firstItem="QUJ-jj-J2i" firstAttribute="leading" secondItem="0Em-Jo-1x9" secondAttribute="leadingMargin" constant="20" id="Uvt-G7-lbX"/>
                             <constraint firstItem="I0Y-oU-aSG" firstAttribute="top" secondItem="7jK-2r-Jcx" secondAttribute="bottom" constant="8" id="Y6K-hk-l8g"/>
                             <constraint firstItem="I0Y-oU-aSG" firstAttribute="top" secondItem="7jK-2r-Jcx" secondAttribute="bottom" constant="8" symbolic="YES" id="gZw-JE-Hbn"/>
                             <constraint firstItem="QUJ-jj-J2i" firstAttribute="top" secondItem="I0Y-oU-aSG" secondAttribute="bottom" constant="60" id="hgf-qh-keg"/>
@@ -254,6 +254,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Ticket info" id="cYt-q9-3en"/>
                     <connections>
+                        <outlet property="imageQRCode" destination="QUJ-jj-J2i" id="Dbe-sh-hpp"/>
                         <outlet property="seatLabel" destination="7jK-2r-Jcx" id="J6L-F2-VIv"/>
                         <outlet property="surnameNameLabel" destination="I0Y-oU-aSG" id="oAb-a5-1yk"/>
                         <outlet property="ticketIdLabel" destination="rRI-Da-C81" id="OEN-XT-4RC"/>

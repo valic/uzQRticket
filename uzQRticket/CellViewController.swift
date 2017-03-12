@@ -172,6 +172,7 @@ class CellViewController: UITableViewController {
         seat = ticket.value(forKey: "seat") as! String
         surnameAndName = ticket.value(forKey: "surnameAndName") as! String
         ticketID = ticket.value(forKey: "ticketID") as! String
+        stringTicket = ticket.value(forKey: "stringTicket") as! String
         
         self.performSegue(withIdentifier: "segueID", sender: nil)
     }
@@ -186,6 +187,7 @@ class CellViewController: UITableViewController {
                 destinationVC.ticketID = ticketID
                 destinationVC.seat = seat
                 destinationVC.surnameAndName = surnameAndName
+                destinationVC.stringTicket = stringTicket
                 
             }
         }        
