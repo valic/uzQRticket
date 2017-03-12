@@ -13,6 +13,7 @@ class TicketTableViewCell: UITableViewCell {
 
     @IBOutlet weak var departureLabel: UILabel!
     @IBOutlet weak var timeDepLabel: UILabel!
+    @IBOutlet weak var dateDepLabel: UILabel!
 
 
 

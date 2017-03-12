@@ -131,7 +131,7 @@ class QRscanViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             print("No barcode/QR code is detected")
             return
         }
-
+        
         // Get the metadata object.
         let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
@@ -145,7 +145,6 @@ class QRscanViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 textQR = metadataObj.stringValue!
                 
                 if let textQR = textQR {
-                       print(textQR)
                     
                     let arrayScanCode = textQR.components(separatedBy: "\n")
                     
@@ -154,23 +153,20 @@ class QRscanViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                         // create an instance of our managedObjectContext
                         let context = getContext ()
                         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Tickets")
-                        
-                        // we set up our entity by selecting the entity and context that we're targeting
-                        let entity = NSEntityDescription.insertNewObject(forEntityName: "Tickets", into: context) as! Tickets
-                        
                         let predicate = NSPredicate(format: "ticketID == %@", arrayScanCode[15])
                         request.predicate = predicate
+                        
                         do {
-                            let results = try context.fetch(request) as! [Tickets]
                             
-                            
-                            if (results.count > 0) {
+                            if ((try context.fetch(request) as! [Tickets]).count > 0) {
                                 
                                 self.deleteCaptureSession ()
                                 alertCaptureSession("Билет уже добавлен")
                                 
                                 
                             } else {
+                                // we set up our entity by selecting the entity and context that we're targeting
+                                let entity = NSEntityDescription.insertNewObject(forEntityName: "Tickets", into: context) as! Tickets
                                 // билета нету в Core Data, добавляем
                                 
                                 entity.setValue(textQR, forKey: "stringTicket") // сохраняем всю строку, для создания QR кода
@@ -214,16 +210,16 @@ class QRscanViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                         }
                         else {
                             self.alertCaptureSession("в QR code нету билета")
-                         //   captureSession!.stopRunning()
+                            //   captureSession!.stopRunning()
                         }
                         
                     }
                 }
-              //  captureSession!.stopRunning()
-              //  videoPreviewLayer!.removeFromSuperlayer()
+                //  captureSession!.stopRunning()
+                //  videoPreviewLayer!.removeFromSuperlayer()
                 
                 // вернутся на Ticket View Controller
-               // returnToTicketViewController()
+                // returnToTicketViewController()
                 
                 
                 

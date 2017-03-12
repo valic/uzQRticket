@@ -13,5 +13,5 @@ import CoreData
 class Tickets: NSManagedObject {
     
     // Insert code here to add functionality to your managed object subclass
-    @NSManaged var string: String?
+  //  @NSManaged var string: String?
 }
