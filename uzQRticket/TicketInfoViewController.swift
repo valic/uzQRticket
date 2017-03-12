@@ -14,24 +14,34 @@ class TicketInfoViewController: UIViewController {
     @IBOutlet weak var seatLabel: UILabel!
     @IBOutlet weak var surnameNameLabel: UILabel!
     @IBOutlet weak var imageQRCode: UIImageView!
-    
-    
+
     
     var ticketID = ""
     var seat = ""
     var surnameAndName = ""
     var stringTicket = ""
-
+    
+    var brightness = CGFloat()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        brightness = UIScreen.main.brightness
+        UIScreen.main.brightness = CGFloat(0.75)
         
         ticketIdLabel.text = ticketID
         seatLabel.text = seat
         surnameNameLabel.text = surnameAndName
         
         generationQR(stringTicket)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIScreen.main.brightness = brightness
+        
     }
     
     override func didReceiveMemoryWarning() {
