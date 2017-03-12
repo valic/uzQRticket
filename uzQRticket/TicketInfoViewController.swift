@@ -15,7 +15,7 @@ class TicketInfoViewController: UIViewController {
     @IBOutlet weak var surnameNameLabel: UILabel!
     @IBOutlet weak var imageQRCode: UIImageView!
     
-    var qrcodeImage: CIImage!
+    
     
     var ticketID = ""
     var seat = ""
@@ -44,30 +44,20 @@ class TicketInfoViewController: UIViewController {
         let data = textQR.data(using: String.Encoding.utf8, allowLossyConversion: false)
         if data != nil {
             
-            let filter = CIFilter(name: "CIQRCodeGenerator")
             
-            filter!.setValue(data, forKey: "inputMessage")
-            filter!.setValue("L", forKey: "inputCorrectionLevel")
+            let QRCodeGeneratorFilter = CIFilter(name: "CIQRCodeGenerator")
+            QRCodeGeneratorFilter!.setValue(data, forKey: "inputMessage")
+            QRCodeGeneratorFilter!.setValue("L", forKey: "inputCorrectionLevel")
+
+            let qrcodeImage = (QRCodeGeneratorFilter!.outputImage)!
             
-            qrcodeImage = filter!.outputImage
+            let scaleX = imageQRCode.frame.size.width / qrcodeImage.extent.size.width
+            let scaleY = imageQRCode.frame.size.height / qrcodeImage.extent.size.height
             
-            displayQRCodeImage()
-        }
+            let transformedImage = qrcodeImage.applying(CGAffineTransform(scaleX: scaleX, y: scaleY))
             
-        else {
-            qrcodeImage = nil
+            imageQRCode.image = UIImage(ciImage: transformedImage)
         }
     }
-    
-    func displayQRCodeImage() {
-        let scaleX = imageQRCode.frame.size.width / qrcodeImage.extent.size.width
-        let scaleY = imageQRCode.frame.size.height / qrcodeImage.extent.size.height
-        
-        let transformedImage = qrcodeImage.applying(CGAffineTransform(scaleX: scaleX, y: scaleY))
-        
-        imageQRCode.image = UIImage(ciImage: transformedImage)
-        
-    }
-    
 
 }
