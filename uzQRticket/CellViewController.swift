@@ -12,6 +12,7 @@ import CoreData
 class CellViewController: UITableViewController {
     
     //  @IBOutlet var tableView: UITableView!
+
     
     var tickets = [NSManagedObject]()
     let textCellIdentifier = "TextCell" // func tableView
@@ -33,6 +34,10 @@ class CellViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      
+        
+
         /*
          // create the delete request for the specified entity
          let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Tickets")
@@ -106,6 +111,8 @@ class CellViewController: UITableViewController {
         
             cell.departureLabel!.text = stringRemoveRange10((person.value(forKey: "departure") as? String)!)
             cell.destinationLabel!.text = stringRemoveRange10((person.value(forKey: "destination") as? String)!)
+        
+
         
         
         

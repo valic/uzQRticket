@@ -14,19 +14,22 @@
         <!--Tickets-->
         <scene sceneID="158-Od-HwA">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="Vu6-dg-ohN" customClass="CellViewController" customModule="uzQRticket" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZhD-bb-YCd">
+                <tableViewController storyboardIdentifier="ticketView" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="Vu6-dg-ohN" customClass="CellViewController" customModule="uzQRticket" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZhD-bb-YCd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TextCell" id="Woz-QR-jPc" customClass="TicketTableViewCell" customModule="uzQRticket" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TextCell" id="Woz-QR-jPc" customClass="TicketTableViewCell" customModule="uzQRticket" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Woz-QR-jPc" id="46h-rJ-TPL">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="109"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVx-QQ-fSl">
+                                            <rect key="frame" x="8" y="4" width="304" height="102"/>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82K-cb-00j">
                                             <rect key="frame" x="8" y="8" width="40" height="16"/>
                                             <constraints>
@@ -46,7 +49,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пункт отправления" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xL-ae-mKK">
-                                            <rect key="frame" x="88" y="8" width="191" height="16"/>
+                                            <rect key="frame" x="88" y="8" width="224" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -67,7 +70,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пункт прибытия" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDW-Pz-HcM">
-                                            <rect key="frame" x="88" y="26" width="191" height="16"/>
+                                            <rect key="frame" x="88" y="26" width="224" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -121,6 +124,7 @@
                                         <constraint firstItem="7zd-WR-DiX" firstAttribute="leading" secondItem="82K-cb-00j" secondAttribute="trailing" id="77F-GU-6MS"/>
                                         <constraint firstItem="82K-cb-00j" firstAttribute="leading" secondItem="46h-rJ-TPL" secondAttribute="leadingMargin" id="9UE-Qy-mnc"/>
                                         <constraint firstItem="IQY-HN-49J" firstAttribute="leading" secondItem="46h-rJ-TPL" secondAttribute="leadingMargin" id="Dxy-p3-KdV"/>
+                                        <constraint firstItem="OVx-QQ-fSl" firstAttribute="top" secondItem="46h-rJ-TPL" secondAttribute="top" constant="4" id="GNu-ZV-cmK"/>
                                         <constraint firstItem="Vl7-1Z-29S" firstAttribute="top" secondItem="IQY-HN-49J" secondAttribute="bottom" constant="5" id="Htm-75-Zie"/>
                                         <constraint firstItem="Lem-NQ-L1w" firstAttribute="baseline" secondItem="IQY-HN-49J" secondAttribute="baseline" id="IPM-gZ-aQJ"/>
                                         <constraint firstItem="6xL-ae-mKK" firstAttribute="centerY" secondItem="82K-cb-00j" secondAttribute="centerY" id="KDu-Iy-a8s"/>
@@ -131,9 +135,12 @@
                                         <constraint firstItem="IQY-HN-49J" firstAttribute="top" secondItem="82K-cb-00j" secondAttribute="bottom" constant="2" id="X7S-QP-keH"/>
                                         <constraint firstItem="0wQ-Bo-W4w" firstAttribute="leading" secondItem="Pmz-Ii-Qb4" secondAttribute="leading" id="YHO-dp-IAq"/>
                                         <constraint firstItem="u0Q-XD-05b" firstAttribute="centerY" secondItem="Pmz-Ii-Qb4" secondAttribute="centerY" id="Ya4-iN-XZp"/>
+                                        <constraint firstAttribute="bottom" secondItem="OVx-QQ-fSl" secondAttribute="bottom" constant="4" id="dXv-1y-bzU"/>
                                         <constraint firstItem="qDW-Pz-HcM" firstAttribute="trailing" secondItem="6xL-ae-mKK" secondAttribute="trailing" id="eeB-xv-TPo"/>
                                         <constraint firstItem="6xL-ae-mKK" firstAttribute="trailing" secondItem="46h-rJ-TPL" secondAttribute="trailingMargin" id="gaS-fI-0cR"/>
+                                        <constraint firstItem="OVx-QQ-fSl" firstAttribute="leading" secondItem="46h-rJ-TPL" secondAttribute="leading" constant="8" id="ldb-oF-bWb"/>
                                         <constraint firstItem="Vl7-1Z-29S" firstAttribute="leading" secondItem="0wQ-Bo-W4w" secondAttribute="leading" id="mj9-Th-9cq"/>
+                                        <constraint firstAttribute="trailing" secondItem="OVx-QQ-fSl" secondAttribute="trailing" constant="8" id="nnT-QB-8K6"/>
                                         <constraint firstItem="VGr-CR-AOQ" firstAttribute="leading" secondItem="0wQ-Bo-W4w" secondAttribute="trailing" constant="10" id="od9-Hu-qTb"/>
                                         <constraint firstItem="Pmz-Ii-Qb4" firstAttribute="top" secondItem="0wQ-Bo-W4w" secondAttribute="bottom" constant="5" id="p9m-FR-4GY"/>
                                         <constraint firstItem="82K-cb-00j" firstAttribute="top" secondItem="46h-rJ-TPL" secondAttribute="topMargin" id="pR2-pj-jq9"/>
@@ -144,6 +151,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="backGroundCardView" destination="OVx-QQ-fSl" id="07f-sZ-6uE"/>
                                     <outlet property="dateDepLabel" destination="7zd-WR-DiX" id="4eb-AS-x5f"/>
                                     <outlet property="dateDesLabel" destination="Lem-NQ-L1w" id="yAG-FA-Ac1"/>
                                     <outlet property="departureLabel" destination="6xL-ae-mKK" id="cMo-Gs-UvJ"/>
